@@ -1,0 +1,52 @@
+/* Catppuccin Mocha */
+@define-color base    #1e1e2e;
+@define-color mantle   #181825;
+@define-color crust    #11111b;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+@define-color overlay0 #6c7086;
+@define-color text     #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color mauve    #cba6f7;
+@define-color lavender #b4befe;
+@define-color pink     #f5c2e7;
+@define-color red      #f38ba8;
+
+window {
+    background-color: rgba(30, 30, 46, 0.95);
+    border-radius: 10px;
+    border: 2px solid #cba6f7;
+    padding: 10px;
+}
+
+image {
+    color: #b4befe;
+    -gtk-icon-size: 32px;
+}
+
+label {
+    color: #cdd6f4;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+progressbar {
+    min-height: 10px;
+}
+
+progressbar trough {
+    background-color: #313244;
+    border-radius: 8px;
+}
+
+progressbar progress {
+    background-color: #cba6f7;
+    border-radius: 8px;
+}
+
+progressbar.muted progress,
+progressbar.mute progress {
+    background-color: #f38ba8;
+}

@@ -1,0 +1,131 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 3,
+  "height": 1,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+
+  "modules-left": ["custom/arch", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "custom/separator",
+    "custom/power-profile",
+    "custom/separator",
+    "network",
+    "custom/separator",
+    "bluetooth",
+    "custom/separator",
+    "wireplumber",
+    "custom/separator",
+    "backlight",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "custom/date",
+
+
+  ],
+  "custom/arch": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/tab": {
+    "format": "[Z]",
+    "on-click": "rofi -show drun"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    }
+  },
+
+
+  "network": {
+    "format-wifi": "󰤨 {essid}",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰤭 Disconnected",
+    "on-click": "kitty -e nmtui"
+  },
+
+ "bluetooth": {
+  "format-on": "󰂯",
+  "format-off": "󰂲",
+  "format-disabled": "󰂲",
+  "format-connected": " {device_alias}",
+  "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+  "tooltip-format": "{controller_alias}\t{controller_address}",
+  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  "on-click": "~/.local/bin/bt-toggle.sh",
+  "on-click-right": "blueman-manager"
+},
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5
+  },
+
+  "wireplumber": {
+    "scroll-step": 5,
+    "format": " {icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"],
+      "headphones": "󰋋",
+      "headset": "󰋎"
+    }
+  },
+  "custom/power-profile": {
+      "exec": "~/.config/waybar/scripts/power-profile.sh",
+      "return-type": "json",
+      "interval": 5,
+      "on-click": "~/.config/waybar/scripts/power-cycle.sh"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": " {icon} {percent}% ",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
+  },
+
+  "battery": {
+    "states": { "warning": 30, "critical": 15 },
+    "format": "{icon} {capacity}% ",
+    "format-charging": "󰂄 {capacity}% ",
+    "format-plugged": "󱟦 {capacity}% ",
+    "format-full": "󰁹 {capacity}% ",
+    "format-icons": [
+      "󰂎", "󰁺", "󰁻", "󰁼", "󰁽",
+      "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+    ]
+  },
+
+  "clock": {
+    "format": "{:%H:%M} "
+  },
+
+  "custom/date": {
+    "exec": "date '+%m-%d-%Y'",
+    "interval": 60,
+    "format": "{}"
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50,
+    "separate-outputs": true
+  }
+}

@@ -1,0 +1,7 @@
+@theme "catppuccin-mocha"
+
+configuration {
+    show-icons: true;
+    font: "SpaceMono Nerd Font Mono 12";	
+}
+

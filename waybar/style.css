@@ -1,0 +1,167 @@
+* {
+    font-family: "FiraCode Nerd Font", monospace, "Noto Sans CJK KR";
+    font-weight: bold;
+    font-size: 13px;
+    margin: 0;
+    color: #C4A7E7;
+}
+
+window#waybar {
+    background: rgba(20, 18, 33, 0.6);
+    border-radius: 0;
+    margin: 0px;
+    padding: 0px 0px;
+}
+
+/* ARCH LOGO */
+
+#custom-arch {
+    font-size: 16px;
+    padding: 0 10px 0 8px;
+    color: #C4A7E7;
+}
+
+#custom-arch:hover {
+    color: #e0def4;
+}
+
+/* WORKSPACES */
+
+#workspaces {
+    margin-left: 4px;
+}
+
+#workspaces button {
+    padding: 0px 1px;
+    margin: 3px 2px;
+    border-radius: 0;
+    background: transparent;
+    color: #5b4950;
+}
+
+#workspaces button.active {
+    border-bottom: 2px solid #C4A7E7;
+}
+
+#workspaces button:hover {
+    background: #1e1e1e;
+}
+
+#workspaces button.urgent {
+    background: #5b4950;
+}
+
+#window {
+    padding: 0 8px;
+}
+
+#mpris {
+    font-weight: 700;
+    padding: 0 4px;
+}
+
+/* RIGHT SIDE MODULES — consistent spacing */
+
+#network,
+#bluetooth,
+#wireplumber,
+#backlight,
+#battery,
+#custom-power-profile {
+    padding: 0 6px;
+}
+
+#tray {
+    padding: 0 6px;
+    margin-right: 3px;
+}
+
+#custom-date {
+    padding: 0 6px;
+    margin-right: 7px;
+}
+
+/* POWER BUTTON */
+
+#custom-power {
+    color: #C4A7E7;
+    padding: 0 6px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+#custom-power:hover {
+    color: #ebbcba;
+}
+
+/* BLUETOOTH */
+
+#bluetooth {
+    color: #C4A7E7;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: #5b4950;
+}
+
+#bluetooth.connected {
+    color: #9ccfd8;
+}
+
+/* POWER PROFILE */
+#custom-power-profile.performance {
+    color: #ebbcba;
+}
+
+#custom-power-profile.balanced {
+    color: #C4A7E7;
+}
+
+#custom-power-profile.power-saver {
+    color: #9ccfd8;
+}
+
+/* RIGHT SIDE STATES */
+
+#battery.warning {
+    background: rgba(246, 193, 119, 0.15);
+    padding: 1px 4px;
+}
+
+#battery.critical {
+    background: rgba(235, 111, 146, 0.18);
+    padding: 1px 4px;
+}
+
+#wireplumber.muted {
+    opacity: 0.6;
+}
+
+/* TOOLTIP */
+
+tooltip {
+    background: #111111;
+    border: 1px solid #333333;
+}
+
+tooltip label {
+    color: #e0def4;
+    font-size: 11px;
+}
+
+#custom-cpucat {
+    font-family: "Waycat", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding-left: 5px;
+    padding-right: 8px;
+}
+
+#custom-separator {
+    color: #5b4950;
+    font-size: 13px;
+    padding: 0 2px;
+    margin: 0 0px;
+}
